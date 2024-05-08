@@ -7,7 +7,7 @@ from tkinter import messagebox
 
 root = Tk()
 root.title("Zazitor")
-root.geometry("1200x660")
+root.geometry("800x600")
 
 global opened_name
 opened_name = False
@@ -105,7 +105,7 @@ t_scroll = Scrollbar(m_frame)
 t_scroll.pack(side=RIGHT, fill=Y)
 
 #textbox 
-m_text = Text(m_frame, width=97, height=25, font=("Calibri", 16), selectbackground="yellow", selectforeground="black", undo=True) 
+m_text = Text(m_frame, width=150, height=30, font=("Calibri", 16), selectbackground="yellow", selectforeground="black", undo=True) 
 m_text.pack()
 
 
