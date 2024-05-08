@@ -28,7 +28,6 @@ def open_file():
     if t_file:
         global opened_name
         opened_name = t_file
-        open_status_name = t_file
         name = t_file
         t_file = open(t_file, 'r')
         stuff = t_file.read()
@@ -37,7 +36,9 @@ def open_file():
 
 #save as file
 def save_as_file(e=False):
+    global opened_name
     t_file = filedialog.asksaveasfilename(defaultextension=".*", initialdir="@/home", title="Save File", filetypes=(("Text Files", "*.txt"),("HTML Files", "*.html"),("Python Files", "*.py"),("All Files", "*.*")))
+    opened_name = t_file
     t_file = open(t_file, 'w')
     t_file.write(m_text.get(1.0, END))
     t_file.close()
