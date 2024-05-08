@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import *
 from tkinter import filedialog
 from tkinter import font
+from tkinter import messagebox
 
 root = Tk()
 root.title("Zazitor")
@@ -48,6 +49,7 @@ def save_file(e=False):
     if opened_name:
         t_file = open(opened_name, 'w')
         t_file.write(m_text.get(1.0, END))
+        m_box = messagebox.showinfo("Saved", "File saved successfully") 
         t_file.close()
     else:
         save_as_file()
